@@ -172,4 +172,19 @@ def update_weather_data():
         else:
             return jsonify({'message': 'City not found in OpenWeatherMap'}), 404
     else:
-        return jsonify({'message': 'City data not found'}), 404    
+        return jsonify({'message': 'City data not found'}), 404 
+
+
+
+
+@app.route("/delete_weather_data", methods=['DELETE'])
+def delete_weather_data():
+    city = request.args.get('city')
+    if city in weather_data:
+        del weather_data[city]
+        return jsonify({'message': 'City data deleted successfully'}), 200
+    else:
+        return jsonify({'message': 'City data not found'}), 404
+
+if __name__ == "__main__":
+    app.run(debug=False)
