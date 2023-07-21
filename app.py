@@ -121,7 +121,9 @@ def get_weather_data():
                 'temp': weather[1],
                 'quote': weather_quote
             }
-            weather_data[user_input] = data  # Store the weather data for the city in the dictionary
+
+
+            weather_data[user_input] = data  
         else:
             error = "Oops! The city name is incorrect or not found. Please try again."
 
