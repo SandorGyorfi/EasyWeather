@@ -197,3 +197,11 @@
     position: sticky;
     top: 100%;
   }
+
+  #quote {
+    color: #072b4b;
+    text-align: center;
+    font-size: 21px;
+    padding: 5%;
+    margin: 8px;
+  }
