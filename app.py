@@ -98,3 +98,28 @@ def get_weather_quote(weather):
         return random.choice(quotes[weather])
     else:
         return None
+    
+
+
+
+    @app.route("/", methods=['GET', 'POST'])
+    def index():
+      data = None
+      error = None
+
+    if request.method == 'POST':
+        user_input = request.form['cityName']
+        weather = get_weather(user_input)
+        if weather:
+            weather_quote = get_weather_quote(weather[0])
+            data = {
+                'city': user_input,
+                'weather': weather[0],
+                'temp': weather[1],
+                'quote': weather_quote
+            }
+            weather_data[user_input] = data  # Store the weather data for the city in the dictionary
+        else:
+            error = "Oops! The city name is incorrect or not found. Please try again."
+
+    return render_template("index.html", data=data, whatsapp_number='+447563713196', error=error)
