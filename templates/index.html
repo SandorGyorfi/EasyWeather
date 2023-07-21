@@ -26,6 +26,18 @@
             <br>
             <button type="submit">Submit <i class='bx bx-cloud'></i></button>
         </form>
+        {% if data %}
+        <h2>Weather in {{ data.city }}</h2>
+        <p class="WT1">Weather: {{ data.weather }}</p>
+        <p class="WT2">Temperature: {{ data.temp }}°C</p>
+        <div id="quote">
+            {% if data.quote %}
+            <p>{{ data.quote }}</p>
+            {% else %}
+            <p>No quote available.</p>
+            {% endif %}
+        </div>
+        {% endif %}
       </div>
     </div>
   </body>
