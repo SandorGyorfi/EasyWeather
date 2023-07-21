@@ -102,10 +102,13 @@ def get_weather_quote(weather):
 
 
 
-    @app.route("/", methods=['GET', 'POST'])
-    def index():
-      data = None
-      error = None
+@app.route("/get_weather_data", methods=['GET'])
+def get_weather_data():
+    city = request.args.get('city')
+    if city in weather_data:
+        return jsonify(weather_data[city]), 200
+    else:
+        return jsonify({'message': 'City data not found'}), 404
 
     if request.method == 'POST':
         user_input = request.form['cityName']
@@ -123,3 +126,24 @@ def get_weather_quote(weather):
             error = "Oops! The city name is incorrect or not found. Please try again."
 
     return render_template("index.html", data=data, whatsapp_number='+447563713196', error=error)
+
+
+@app.route("/add_weather_data", methods=['POST'])
+def add_weather_data():
+    city = request.form['city']
+    if city not in weather_data:
+        weather = get_weather(city)
+        if weather:
+            weather_quote = get_weather_quote(weather[0])
+            data = {
+                'city': city,
+                'weather': weather[0],
+                'temp': weather[1],
+                'quote': weather_quote
+            }
+            weather_data[city] = data
+            return jsonify(data), 201
+        else:
+            return jsonify({'message': 'City not found in OpenWeatherMap'}), 404
+    else:
+        return jsonify({'message': 'City data already exists'}), 409
