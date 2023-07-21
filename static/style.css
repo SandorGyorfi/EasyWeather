@@ -169,7 +169,14 @@ p {
 }
 
 .card {
-  background: linear-gradient(#08355d, #0d5785, #38758d, #6bbfbf, #6bbfbf, #f2f0e4);
+  background: linear-gradient(
+    #08355d,
+    #0d5785,
+    #38758d,
+    #6bbfbf,
+    #6bbfbf,
+    #f2f0e4
+  );
   box-shadow: 1.25px 2.5px 5px 1.25px #0a4273;
   color: #fff;
   padding: 10px;
