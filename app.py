@@ -185,6 +185,7 @@ def delete_weather_data():
         return jsonify({'message': 'City data deleted successfully'}), 200
     else:
         return jsonify({'message': 'City data not found'}), 404
+    
 
 if __name__ == "__main__":
     app.run(debug=False)
