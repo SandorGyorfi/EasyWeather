@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Short+Stack&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;900&family=Short+Stack&display=swap');
 
 
 *  {
@@ -13,7 +13,7 @@ body {
   margin: 0;
   background: #6bbfbf;
   text-align: center;
-  font-family: 'Short Stack', cursive;
+  font-family: 'Playfair Display', serif;
   background-repeat: no-repeat;
   background-size: 300px;
   background-blend-mode: overlay;
