@@ -134,7 +134,7 @@ p {
   color: #fff;
   font-weight: bold;
   padding: 1%;
-  text-align: left;
+  text-align: center; 
   font-size: 20px;
   text-transform: capitalize;
 }
@@ -161,11 +161,19 @@ p {
 .container {
   text-align: center;
   display: flex;
+  flex-direction: column; 
   justify-content: center;
   background-color: #6bbfbf;
   flex-wrap: wrap;
-  margin: 10px auto; /* Center horizontally */
+  margin: 10px auto; 
   min-height: 100vh;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
 }
 
 .card {
