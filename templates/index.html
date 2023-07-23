@@ -4,7 +4,6 @@
     <meta charset="UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet">
     <title>EasyWeather</title>
 </head>
@@ -15,20 +14,22 @@
 
 <div class="container">
     <div class="card">
-      <br>
         <form class="cN" method="POST">
             <p class="welcome">"Welcome to EasyWeather! Discover the magic of weather with a smile – simply enter your city, and we'll bring you the forecast while brightening your day with uplifting weather quotes. Let the sunshine of our service warm your heart, rain or shine!"</p>
-                <label for="cityName">Enter city<i class='bx bx-down-arrow-circle'></i></label>
-                <br>
+            <div align="center">
+                <label for="cityName">Enter city<i class='bx bx-right-arrow-alt'></i></label><br>
                 <input type="text" id="cityName" name="cityName" required/>
-              </form>
+            </div>
+
             {% if error %}
             <p class="error">{{ error }}</p>
             {% endif %}
             <br>
           
-        
-        <button type="submit">Submit <i class='bx bx-cloud'></i></button>
+            <div align="center">
+                <button type="submit">Submit <i class='bx bx-cloud'></i></button>
+            </div>
+        </form>
         {% if data %}
         <h2>Weather in {{ data.city }}</h2>
         <p class="WT1">Weather: {{ data.weather }}</p>
