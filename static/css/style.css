@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;900&family=Short+Stack&display=swap');
 
-
-*  {
+* {
   padding: 0;
   margin: 0;
   text-decoration: none;
@@ -166,29 +165,29 @@ p {
 .container {
   text-align: center;
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   justify-content: center;
   background-color: #6bbfbf;
   flex-wrap: wrap;
-  margin: 10px auto; 
+  margin: 10px auto;
   min-height: 100vh;
 }
 
-
 .card {
   background: linear-gradient(
-      #08355d,
-      #0d5785,
-      #38758d,
-      #6bbfbf,
-      #6bbfbf,
-      #f2f0e4
+    #08355d,
+    #0d5785,
+    #38758d,
+    #6bbfbf,
+    #6bbfbf,
+    #f2f0e4
   );
   box-shadow: 1.25px 2.5px 5px 1.25px #0a4273;
   color: #fff;
   padding: 10px;
   margin: 10px;
-  width: 858px;
+  width: 100%;
+  max-width: 858px;
   font-weight: lighter;
   text-align: center;
   border-radius: 0.3%;
@@ -238,5 +237,11 @@ p {
   .logo {
     text-align: center;
     font-size: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 80%;
   }
 }
