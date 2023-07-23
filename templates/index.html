@@ -18,7 +18,7 @@
         <form class="cN" method="POST">
             <p class="welcome">"Welcome to EasyWeather! Discover the magic of weather with a smile – simply enter your city, and we'll bring you the forecast while brightening your day with uplifting weather quotes. Let the sunshine of our service warm your heart, rain or shine!"</p>
             <div align="center">
-                <label for="cityName">Enter city<i class='bx bx-right-arrow-alt'></i></label><br>
+                <label for="cityName">Enter city<i class='bx bx-down-arrow-circle'></i></label><br>
                 <input type="text" id="cityName" name="cityName" required/>
             </div>
 
@@ -45,9 +45,10 @@
         {% endif %}
     </div>
     <div class="contact">
-        <p>If you have any questions, feel free to contact us on WhatsApp:</p>
-        <a href="https://wa.me/{{ whatsapp_number }}" target="_blank">
-            <i class='bx bxl-whatsapp whatsapp-icon'></i>
+        <p>If you have any questions, feel free to contact us on WhatsApp:
+          <a href="https://wa.me/{{ whatsapp_number }}" target="_blank"></a>
+          <i class='bx bxl-whatsapp whatsapp-icon'></i></p>
+
         </a>
     </div>
 </div>
