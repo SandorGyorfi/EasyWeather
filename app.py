@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, jsonify
 import requests
 import random
-import os 
+import os
 
 
 app = Flask(__name__)
@@ -9,7 +9,8 @@ app = Flask(__name__)
 weather_data = {}
 
 API_KEY = os.environ.get('API_KEY')
-
+if not API_KEY:
+    raise ValueError("API_KEY environment variable not set")
 
 
 def get_weather(user_input):
@@ -94,7 +95,7 @@ def get_weather_quote(weather):
             "Haze envelops the landscape, revealing only fragments of reality, inviting us to seek meaning beyond what meets the eye. - Ziggy Marley"
         ]
 
-    }
+     }
 
     if weather in quotes:
         return random.choice(quotes[weather])
@@ -147,7 +148,7 @@ def add_weather_data():
             return jsonify({'message': 'City not found in OpenWeatherMap'}), 404
     else:
         return jsonify({'message': 'City data already exists'}), 409
-
+    
 
 
 
@@ -170,7 +171,7 @@ def update_weather_data():
             return jsonify({'message': 'City not found in OpenWeatherMap'}), 404
     else:
         return jsonify({'message': 'City data not found'}), 404
-
+    
 
 
 
@@ -182,7 +183,8 @@ def delete_weather_data():
         return jsonify({'message': 'City data deleted successfully'}), 200
     else:
         return jsonify({'message': 'City data not found'}), 404
-
+    
 
 if __name__ == "__main__":
-    app.run(debug=False)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port, debug=False)
