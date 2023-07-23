@@ -242,9 +242,9 @@ For any inquiries, suggestions, or support, please feel free to reach out to:
 > - HTML/CSS
 
 
-![Company Logo](images\logopic.png)   
+<img src="images\logopic.png"> 
 
 
- ##### _EasyWeather is a personal project and is not associated with any company or organization. The application is developed solely for educational and recreational purposes._
+ ##### EasyWeather is a personal project and is not associated with any company or organization. The application is developed solely for educational and recreational purposes.
 
 
