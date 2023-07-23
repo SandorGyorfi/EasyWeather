@@ -48,7 +48,7 @@ The top priority is to provide users with a delightful and memorable experience 
 
 # The Main Page
 
-![Website view](readme.png)
+<img src="images\readme.png"> 
 
 The main page navigation of EasyWeather is carefully crafted to provide users with a seamless and intuitive journey through weather forecasts and uplifting quotes. Our goal is to guide you with ease and make the entire experience enjoyable. Here's how our main page navigation ensures smooth navigation and exploration:
 
