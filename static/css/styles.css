@@ -11409,7 +11409,7 @@ body {
   height: auto;
   min-height: 35rem;
   padding: 15rem 0;
-  background: linear-gradient(var(--primary-color), var(--secondary-color)), url("../static/assets/img/bg.jpg");
+  background: linear-gradient(var(--primary-color), var(--secondary-color)), url("../assets/img/bg.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
