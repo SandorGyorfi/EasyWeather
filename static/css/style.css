@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;900&family=Short+Stack&display=swap');
+
 
 * {
   padding: 0;
@@ -12,7 +12,7 @@ body {
   margin: 0;
   background: #6bbfbf;
   text-align: center;
-  font-family: 'Playfair Display', serif;
+  font-family: Arial, Helvetica, sans-serif;
   background-repeat: no-repeat;
   background-size: 300px;
   background-blend-mode: overlay;
@@ -51,8 +51,6 @@ h3 {
   padding: 3%;
   color: #fff;
 }
-
-
 
 button {
   text-align: center;
@@ -102,19 +100,18 @@ footer {
 p {
   text-transform: capitalize;
   font-weight: bold;
-
 }
 
 .welcome {
   margin: 10px;
   padding: 1.5%;
-  font-size: 12;
+  font-size: 12px;
   text-align: center;
   text-transform: capitalize;
 }
 
 .contact {
-  font-size: 12;
+  font-size: 12px;
 }
 
 .whatsapp-icon {
@@ -190,7 +187,7 @@ p {
 #quote {
   color: #072b4b;
   text-align: center;
-  font-size: 21px;
+  font-size: 18px;
   padding: 5%;
   margin: 8px;
 }
@@ -216,6 +213,14 @@ p {
     align-items: center;
     width: 100%;
   }
+}
+
+@media only screen and (min-width: 1100px) {
+
+  .container {
+    width: auto;
+  }
+
 }
 
 @media (max-width: 952px) {
