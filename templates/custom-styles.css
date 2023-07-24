@@ -1,0 +1,19 @@
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header.masthead {
+    background-image: url('../startbootstrap-grayscale/img/bg-masthead.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+
+header.masthead h1 {
+    color: #fff;
+    text-align: center;
+    padding-top: 200px; 
+}
