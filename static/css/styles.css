@@ -11402,6 +11402,19 @@ body {
 }
 
 /*------------------------------------------bg to change--*/
+.masthead:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("{{ url_for('static', filename='assets/img/bg.jpg') }}");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+}
 
 .masthead {
   position: relative;
