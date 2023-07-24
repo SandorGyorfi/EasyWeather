@@ -5,7 +5,7 @@ body {
 }
 
 header.masthead {
-    background-image: url('static/assets/img/bg.png');
+    background-image: url('static/assets/img/bg.jpg');
     background-size: cover;
     background-position: center;
     height: 100vh;
