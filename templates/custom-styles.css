@@ -5,7 +5,7 @@ body {
 }
 
 header.masthead {
-    background-image: url('node_modules\startbootstrap-grayscale\dist\assets\img\bg-masthead.jpg');
+    background-image: url('static/assets/img/bg-masthead.jpg');
     background-size: cover;
     background-position: center;
     height: 100vh;

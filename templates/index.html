@@ -7,26 +7,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EasyWeather</title>
 
-
-    
-    <link rel="stylesheet" href="{{ url_for('static', filename='static\startbootstrap-grayscale-gh-pages\startbootstrap-grayscale-gh-pages\css\styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
     <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet">
-
-
-    <link href="templates\custom-styles.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='custom-styles.css') }}" rel="stylesheet">
 </head>
 
 <body>
     <header class="masthead">
-
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 mx-auto">
                     <h1 class="text-uppercase">
                         Easy<i class="bx bx-cloud"></i>Weather
                     </h1>
-                    <p class="lead">Enter your city to discover the magic of weather with inspirational weather
-                        quotes. No matter the weather, our service will warm your heart.</p>
+                    <p class="lead">
+                        Enter your city to discover the magic of weather with inspirational weather quotes. No matter the
+                        weather, our service will warm your heart.
+                    </p>
                 </div>
             </div>
             <div class="row">
@@ -63,7 +60,7 @@
         </div>
     </header>
 
-    <script src="static\startbootstrap-grayscale-gh-pages\startbootstrap-grayscale-gh-pages\js\scripts.js"></script>
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
 </body>
 
 </html>
