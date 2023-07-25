@@ -2,11 +2,20 @@ html {
   scroll-padding-top: calc(4.5rem - 1px);
 }
 
+html {
+  scroll-padding-top: calc(4.5rem - 1px);
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   letter-spacing: 0.05rem;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
 .btn {
