@@ -411,8 +411,8 @@ select:disabled {
 button,
 [type="button"],
 [type="reset"],
-[type="submit"] {
-  --webkit-appearance: button;
+[type="submit"] { 
+  -webkit-appearance: button;
 }
 button:not(:disabled),
 [type="button"]:not(:disabled),
@@ -470,7 +470,7 @@ legend + * {
 
 [type="search"] {
   outline-offset: -2px;
- --webkit-appearance: textfield;
+  -webkit-appearance: textfield;
 }
 
 /* rtl:raw:
@@ -491,7 +491,7 @@ legend + * {
 
 ::file-selector-button {
   font: inherit;
-  --webkit-appearance: button;
+  -webkit-appearance: button;
 }
 
 output {
@@ -11404,12 +11404,12 @@ body {
 /*------------------------------------------bg to change--*/
 .masthead:before {
   content: "";
-  position: relative;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
- 
+  background-image: url("{{ url_for('static', filename='assets/img/bg.jpg') }}");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -11422,7 +11422,7 @@ body {
   height: auto;
   min-height: 35rem;
   padding: 15rem 0;
-
+  background: linear-gradient(var(--primary-color), var(--secondary-color)), url("../assets/img/bg.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
