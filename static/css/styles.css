@@ -413,7 +413,11 @@ button,
 [type="reset"],
 [type="submit"] { 
   -webkit-appearance: button;
+  -moz-appearance: button;
+  -ms-appearance: button;
+  appearance: button;
 }
+
 button:not(:disabled),
 [type="button"]:not(:disabled),
 [type="reset"]:not(:disabled),
@@ -471,6 +475,8 @@ legend + * {
 [type="search"] {
   outline-offset: -2px;
   -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
 }
 
 /* rtl:raw:
@@ -492,6 +498,8 @@ legend + * {
 ::file-selector-button {
   font: inherit;
   -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
 }
 
 output {
@@ -11409,7 +11417,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("{{ url_for('static', filename='assets/img/bg.jpg') }}");
+  background-image: url('https://couplesresorts.co.uk/wp-content/uploads/2022/11/sean-oulashin-KMn4VEeEPR8-unsplash-scaled.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -11422,7 +11430,7 @@ body {
   height: auto;
   min-height: 35rem;
   padding: 15rem 0;
-  background: linear-gradient(var(--primary-color), var(--secondary-color)), url("../assets/img/bg.jpg");
+  background: linear-gradient(var(--primary-color), var(--secondary-color)), url('https://couplesresorts.co.uk/wp-content/uploads/2022/11/sean-oulashin-KMn4VEeEPR8-unsplash-scaled.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
