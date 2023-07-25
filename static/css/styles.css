@@ -45,9 +45,9 @@ body {
   text-align: center;
   color: #fff;
   padding: 100px 0;
-  background: linear-gradient(to bottom, #001c55 0%, #007bff 75%, #007bff 100%), url("static/assets/img/bg.jpg");
   background-size: cover;
   background-position: center;
+  background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&dl=sean-oulashin-KMn4VEeEPR8-unsplash.jpg');
 }
 
 .masthead h1 {
@@ -77,6 +77,7 @@ body {
 
 .form-inline {
   margin-top: 30px;
+  text-align: center;
 }
 
 .form-group {
@@ -84,8 +85,14 @@ body {
 }
 
 .form-control {
-  width: 100%;
+  width: 50%; 
   border-radius: 4px;
+  margin: 0 auto; 
+}
+
+.form-control:hover {
+  background-color: #0056b3;
+  color: #fff;
 }
 
 .WT1,
