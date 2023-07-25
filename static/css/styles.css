@@ -412,7 +412,7 @@ button,
 [type="button"],
 [type="reset"],
 [type="submit"] {
-  -webkit-appearance: button;
+  --webkit-appearance: button;
 }
 button:not(:disabled),
 [type="button"]:not(:disabled),
@@ -470,7 +470,7 @@ legend + * {
 
 [type="search"] {
   outline-offset: -2px;
-  -webkit-appearance: textfield;
+ --webkit-appearance: textfield;
 }
 
 /* rtl:raw:
@@ -491,7 +491,7 @@ legend + * {
 
 ::file-selector-button {
   font: inherit;
-  -webkit-appearance: button;
+  --webkit-appearance: button;
 }
 
 output {
@@ -517,7 +517,7 @@ progress {
 
 .lead {
   font-size: 1.25rem;
-  
+  font-weight: 600;
 }
 
 .display-1 {
@@ -11404,7 +11404,7 @@ body {
 /*------------------------------------------bg to change--*/
 .masthead:before {
   content: "";
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
@@ -11438,7 +11438,7 @@ body {
   font-size: 2.5rem;
   line-height: 2.5rem;
   letter-spacing: 0.8rem;
-  background: linear-gradient(rgba(0, 0, 255, 1), rgba(0, 0, 139, 1));
+  background: linear-gradient(rgba(0, 0, 139, 1), rgba(0, 0, 255, 1));
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
