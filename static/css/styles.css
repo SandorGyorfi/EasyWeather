@@ -17,6 +17,7 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.15rem;
   border: 0;
+  color: #007bff; 
 }
 
 .btn-primary {
@@ -27,10 +28,6 @@ body {
   background-color: #007bff;
   color: #fff;
   cursor: pointer;
-}
-
-.btn-primary:hover {
-  background-color: #0056b3;
 }
 
 .btn-xl {
@@ -86,13 +83,16 @@ body {
 
 .form-control {
   width: 50%; 
+  height: 4rem; 
   border-radius: 4px;
   margin: 0 auto; 
+  border: 1px solid #007bff; 
+  box-shadow: 0 0.2rem 0.4rem rgba(0, 123, 255, 0.5); 
+  color: #007bff; 
 }
 
-.form-control:hover {
-  background-color: #0056b3;
-  color: #fff;
+.btn-primary {
+  margin-top: 30px; 
 }
 
 .WT1,
