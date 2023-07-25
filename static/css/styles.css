@@ -137,14 +137,19 @@ body {
   text-align: center;
 }
 
-.footer{
-  color: #001c55;
-  font-size: 8px;
-  background-color: aqua;
-}
-
 #error {
   color: red;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: aqua;
+  color: #001c55;
+  font-size: 8px;
+  padding: 5px;
 }
 
 .whatsapp-contact {
@@ -163,6 +168,26 @@ body {
   box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.5);
 }
 
-.whatsapp-contact:hover {
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+.whatsapp-contact i {
+  font-size: 28px;
+}
+
+
+.masthead h1,
+.masthead h2,
+.text-uppercase,
+.lead,
+.form-inline,
+.form-group,
+.form-control,
+.WT1,
+.WT2,
+.cN,
+#quote p,
+#cityName h2 {
+  margin: 10px;
+}
+
+.btn-primary {
+  margin-top: 20px; 
 }
