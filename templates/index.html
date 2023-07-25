@@ -1,69 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>EasyWeather</title>
 
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
-    <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/styles.css') }}"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
 
-</head>
-
-<body>
-    <header class="masthead" style="background-image: url('https://couplesresorts.co.uk/wp-content/uploads/2022/11/sean-oulashin-KMn4VEeEPR8-unsplash-scaled.jpg')">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 mx-auto">
-                    <h1 class="text-uppercase">
-                        Easy<i class="bx bx-cloud"></i>Weather
-                    </h1>
-                    <p class="lead">
-                        Enter your city to discover the magic of weather with inspirational weather quotes. No matter the
-                        weather, our service will warm your heart.
-                    </p>
-                </div>
-            </div>
-            <br>
-            <div class="row">
-                <div class="col-lg-8 mx-auto">
-                    <form class="form-inline" method="POST">
-                        <div class="form-group">
-                            <label for="cityName" class="sr-only">Enter city<i class='bx bx-down-arrow-alt'></i></label>
-                            <br>
-                            <input type="text" class="form-control" id="cityName" name="cityName" required
-                                placeholder="Enter city">
-                        </div>
-                        {% if error %}
-                        <p class="error">{{ error }}</p>
-                        {% endif %}
-                        <br>
-                        <button type="submit" class="btn btn-primary btn-xl">Submit <i class="bx bx-cloud"></i></button>
-                    </form>
-                </div>
-            </div>
-            {% if data %}
-            <div class="row">
-                <div class="col-lg-8 mx-auto">
-                    <h2>Weather in {{ data.city }}</h2>
-                    <p class="WT1">Weather: {{ data.weather }}</p>
-                    <p class="WT2">Temperature: {{ data.temp }}°C</p>
-                    <div id="quote">
-                        {% if data.quote %}
-                        <p>{{ data.quote }}</p>
-                        {% else %}
-                        <p>No quote available.</p>
-                        {% endif %}
-                    </div>
-                </div>
-            </div>
-            {% endif %}
+  <body style="
+  background-image: url('https://couplesresorts.co.uk/wp-content/uploads/2022/11/sean-oulashin-KMn4VEeEPR8-unsplash-scaled.jpg')">
+    <header
+      class="masthead">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h1 class="text-uppercase">
+              Easy<i class="bx bx-cloud"></i>Weather
+            </h1>
+            <p class="lead">
+              Enter your city to discover the magic of weather with
+              inspirational weather quotes. No matter the weather, our service
+              will warm your heart.
+            </p>
+          </div>
         </div>
+
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <form class="form-inline" method="POST">
+              <div class="form-group">
+                <label for="cityName" class="sr-only"
+                  >Enter city<i class="bx bx-down-arrow-alt"></i
+                ></label>
+
+                <input
+                  type="text"
+                  class="form-control"
+                  id="cityName"
+                  name="cityName"
+                  required
+                  placeholder="Enter city"
+                />
+              </div>
+              {% if error %}
+              <p class="error">{{ error }}</p>
+              {% endif %}
+
+              <button type="submit" class="btn btn-primary btn-xl">
+                Submit <i class="bx bx-cloud"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+        {% if data %}
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h2>Weather in {{ data.city }}</h2>
+            <p class="WT1">Weather: {{ data.weather }}</p>
+            <p class="WT2">Temperature: {{ data.temp }}°C</p>
+            <div id="quote">
+              {% if data.quote %}
+              <p>{{ data.quote }}</p>
+              {% else %}
+              <p>No quote available.</p>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+        {% endif %}
+      </div>
     </header>
 
     <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
-</body>
-
+  </body>
 </html>
