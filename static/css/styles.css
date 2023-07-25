@@ -18,6 +18,11 @@ body {
   letter-spacing: 0.15rem;
   border: 0;
   color: #007bff; 
+  transition: box-shadow 0.25s ease-in-out; 
+}
+
+.btn:hover {
+  box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.3) !important; 
 }
 
 .btn-primary {
@@ -28,6 +33,11 @@ body {
   background-color: #007bff;
   color: #fff;
   cursor: pointer;
+  transition: box-shadow 0.25s ease-in-out; 
+}
+
+.btn-primary:hover {
+  box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.3); 
 }
 
 .btn-xl {
@@ -61,20 +71,25 @@ body {
   max-width: 20rem;
   font-size: 1rem;
   margin: 0 auto; 
+  color: #007bff; 
 }
 
 .text-uppercase {
   font-size: 3rem;
+  color: #007bff; 
 }
 
 .lead {
   font-size: 1.25rem;
   margin-top: 25px;
+  color: #007bff;
 }
 
 .form-inline {
   margin-top: 30px;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .form-group {
@@ -82,13 +97,18 @@ body {
 }
 
 .form-control {
-  width: 50%; 
-  height: 4rem; 
+  width: 50%;
+  height: 3rem;
   border-radius: 4px;
-  margin: 0 auto; 
-  border: 1px solid #007bff; 
-  box-shadow: 0 0.2rem 0.4rem rgba(0, 123, 255, 0.5); 
-  color: #007bff; 
+  border: 1px solid #007bff;
+  box-shadow: 0 0.2rem 0.4rem rgba(0, 123, 255, 0.5);
+  color: #007bff;
+  transition: box-shadow 0.25s ease-in-out;
+  margin: 0 auto; /* Center the input form */
+}
+
+.form-control:hover {
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.5);
 }
 
 .btn-primary {
@@ -96,16 +116,18 @@ body {
 }
 
 .WT1,
-.WT2 {
+.WT2,
+.masthead h2,
+#quote p,
+.lead,
+#cityName h2 {
   font-size: 1.5rem;
   font-weight: bold;
   margin-bottom: 5px;
+  color: #007bff; 
 }
+
 
 #error {
   color: red;
-}
-
-#quote p {
-  font-size: 1.25rem;
 }
