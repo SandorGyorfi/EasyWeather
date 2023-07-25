@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>EasyWeather</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EasyWeather</title>
 
-    <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename='css/styles.css') }}"/>
-    <link
-      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet"/>
-  </head>
-  <body>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+  <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body>
     <header
-      class="masthead">
+      class="masthead" style="background-image: url('https://couplesresorts.co.uk/wp-content/uploads/2022/11/sean-oulashin-KMn4VEeEPR8-unsplash-scaled.jpg')">
       <div class="container">
         <div class="row">
           <div class="col-lg-8 mx-auto">
@@ -28,7 +29,7 @@
             </p>
           </div>
         </div>
-
+        
         <div class="row">
           <div class="col-lg-8 mx-auto">
             <form class="form-inline" method="POST">
