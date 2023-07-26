@@ -37,7 +37,7 @@ body {
   letter-spacing: 0.8rem;
   padding: 2%;
   background-clip: text;
-  
+
   margin: 0 auto;
 }
 
@@ -148,8 +148,9 @@ body {
   right: 0;
   bottom: 0;
   color: #001c55;
+  width: 100%;
   text-align: right;
-  font-size: 14px;
+  font-size: 10px;
   padding: 1.2%;
 }
 
@@ -266,7 +267,8 @@ body {
 
 
 #layer {
-  position: relative;
+  position: sticky;
+  opacity: 0.89;
 }
 
 #layer::before {
@@ -278,22 +280,22 @@ body {
   height: 100%;
   background-color: rgba(255, 255, 255, 0.65); 
   z-index: -1;
-  border-radius: 10px; 
+  border-radius: 3%; 
 }
 
 
 #layer h2,
 #layer p {
   font-size: 20px;
-  margin: 10px; 
+  margin: 8px; 
   padding: 1.2%; 
   color: #001c55; 
   text-align: center; 
 }
 
 #quote {
-  font-size: 18px; 
-  margin: 18px; 
+  font-size: 20px; 
+  margin: 12px; 
   padding: 1.2%; 
   color: #001c55; 
   text-align: center; 
