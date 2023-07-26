@@ -32,15 +32,12 @@ body {
 }
 
 .masthead h1 {
-  font-size: 4.5rem;
-  line-height: 3rem;
+  font-size: 3.5rem;
+  line-height: 3.5rem;
   letter-spacing: 0.8rem;
-  padding: 2.8%;
-  background: linear-gradient(to top right, #007bff 0%, #001c55 100%);
-  -webkit-background-clip: text;
+  padding: 2%;
   background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: #001c55;
+  
   margin: 0 auto;
 }
 
@@ -103,11 +100,11 @@ body {
   background-color: #001c55;
   color: #fff;
   cursor: pointer;
-  transition: box-shadow 0.25s ease-in-out;
+  transition: box-shadow 0.25s ease-in-out; 
 }
 
 .btn-primary:hover {
-  box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.3); 
 }
 
 #cityName h2 {
@@ -115,22 +112,7 @@ body {
   font-weight: bolder;
 }
 
-#layer {
-  position: relative;
-}
-
-#layer::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.6);
-  z-index: -1;
-}
-
-#layer .WT1,
+.WT1,
 .WT2,
 .cN .masthead h2,
 #quote p,
@@ -280,4 +262,39 @@ body {
   .form-control {
     max-width: 300px;
   }
+}
+
+
+#layer {
+  position: relative;
+}
+
+#layer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.65); 
+  z-index: -1;
+  border-radius: 10px; 
+}
+
+
+#layer h2,
+#layer p {
+  font-size: 20px;
+  margin: 10px; 
+  padding: 1.2%; 
+  color: #001c55; 
+  text-align: center; 
+}
+
+#quote {
+  font-size: 18px; 
+  margin: 18px; 
+  padding: 1.2%; 
+  color: #001c55; 
+  text-align: center; 
 }
