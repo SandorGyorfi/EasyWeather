@@ -16,6 +16,22 @@ body {
   min-height: 100vh;
 }
 
+.masthead {
+  font-size: 18px;
+  margin: 18px;
+  padding: 2%;
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 35rem;
+  text-align: center;
+  color: #001c55;
+  padding: 100px 0;
+  background-size: cover; 
+  background-position: center;
+  background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&dl=sean-oulashin-KMn4VEeEPR8-unsplash.jpg');
+}
+
 @media only screen and (max-width: 767px) {
   .masthead h1 {
     font-size: 2.5rem;
