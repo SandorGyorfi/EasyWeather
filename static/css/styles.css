@@ -31,32 +31,20 @@ body {
   align-items: center;
 }
 
-
 .masthead h1 {
   font-size: 3.5rem;
   line-height: 3.5rem;
   letter-spacing: 0.8rem;
   padding: 2%;
-  margin: 0 auto;
-  background-clip: text;
+  background: linear-gradient(to top left, #007bff 0%, #001c55 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
-  position: relative;
-  z-index: 1;
+  color: #001c55;
+  margin: 0 auto;
 }
 
-.masthead h1::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-image: linear-gradient(to bottom right, #007bff, #00008b);
-  z-index: -1;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  animation: colorChange 5s linear infinite;
-}
+
 .masthead h2 {
   font-size: 1rem;
   margin: 0 auto;
@@ -265,15 +253,4 @@ body {
 }
 
 
-@keyframes colorChange {
-  0% {
-    background-image: linear-gradient(to bottom right, #007bff, #00008b);
-  }
-  50% {
-    background-image: linear-gradient(to bottom right, #00008b, #007bff);
-  }
-  100% {
-    background-image: linear-gradient(to bottom right, #007bff, #00008b);
-  }
-}
 
