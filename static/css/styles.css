@@ -1,6 +1,4 @@
-html {
-  scroll-padding-top: calc(4.5rem - 1px);
-}
+
 
 html {
   scroll-padding-top: calc(4.5rem - 1px);
@@ -18,175 +16,118 @@ body {
   min-height: 100vh;
 }
 
-.btn {
-  box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
-  padding: 1.25rem 2rem;
-  font-family: "Roboto", Arial, sans-serif;
-  font-size: 80%;
-  text-transform: uppercase;
-  letter-spacing: 0.15rem;
-  border: 0;
-  color: #007bff; 
-  transition: box-shadow 0.25s ease-in-out; 
+@media only screen and (max-width: 767px) {
+  .masthead h1 {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+  }
+
+  .form-control {
+    max-width: 250px;
+    width: 100%;
+  }
+
+  .form-inline {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn-primary {
+    font-size: 1rem;
+    padding: 8px 20px;
+  }
+
+  .masthead h2 {
+    max-width: 15rem;
+    font-size: 0.9rem;
+  }
+
+  .WT1,
+  .WT2,
+  .cN,
+  .masthead h2,
+  #quote p,
+  .lead,
+  #cityName h2 {
+    font-size: 16px;
+    margin: 10px;
+    padding: 2%;
+  }
 }
 
-.btn:hover {
-  box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.3) !important; 
+@media only screen and (min-width: 768px) and (max-width: 858px) {
+  .form-control {
+    max-width: 280px;
+  }
+
+  .btn-primary {
+    font-size: 1.1rem;
+    padding: 10px 22px;
+  }
 }
 
-.btn-primary {
-  font-size: 1.25rem;
-  padding: 10px 25px;
-  border: none;
-  justify-items: center;
-  margin: 6px;
-  border-radius: 4px;
-  background-color: #001c55;
-  color: #fff;
-  cursor: pointer;
-  transition: box-shadow 0.25s ease-in-out; 
+@media only screen and (min-width: 859px) and (max-width: 952px) {
+  .form-control {
+    max-width: 320px;
+  }
+
+  .masthead h2 {
+    max-width: 18rem;
+    font-size: 1rem;
+  }
+
+  .WT1,
+  .WT2,
+  .cN,
+  .masthead h2,
+  #quote p,
+  .lead,
+  #cityName h2 {
+    font-size: 17px;
+  }
+
+  .btn-primary {
+    font-size: 1.2rem;
+    padding: 12px 24px;
+  }
 }
 
-.btn-primary:hover {
-  box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.3); 
+
+@media only screen and (min-width: 953px) and (max-width: 1100px) {
+  .form-control {
+    max-width: 380px;
+  }
+
+  .btn-primary {
+    font-size: 1.3rem;
+    padding: 14px 26px;
+  }
 }
 
-.btn-xl {
-  font-size: 1.25rem;
+@media only screen and (min-width: 1101px) {
+  .form-control {
+    max-width: 400px;
+  }
+
 }
 
-.masthead {
-  font-size: 18px;
-  margin: 18px;
-  padding: 2%;
-  position: relative;
-  width: 100%;
-  height: auto;
-  min-height: 35rem;
-  text-align: center;
+
+.whatsapp-contact {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
   color: #001c55;
-  padding: 100px 0;
-  background-size: cover;
-  background-position: center;
-  background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&dl=sean-oulashin-KMn4VEeEPR8-unsplash.jpg');
-}
-
-.masthead h1 {
-  font-size: 3.5rem;
-  line-height: 3.5rem;
-  letter-spacing: 0.8rem;
-  padding: 2%;
-  background: linear-gradient(to right, #007bff 0%, #001c55 100%);
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: #007bff; 
-}
-
-.masthead h2 {
-  max-width: 20rem;
-  font-size: 1rem;
-  margin: 0 auto; 
-  color: #001c55; 
-}
-
-.text-uppercase {
-  font-size: 3rem;
-  color: #001c55; 
-}
-
-.lead {
-  font-size: 1.25rem;
-  margin-top: 25px;
-  color: #001c55;
-}
-
-.form-inline {
-  margin-top: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.form-group {
-  margin-bottom: 0;
-}
-
-.form-control {
-  width: 600px;
-  height: 1.3rem;
-  border-radius: 4px;
-  border: 1px solid #007bff;
-  box-shadow: 0 0.2rem 0.4rem rgba(0, 123, 255, 0.5);
-  color: #001c55;
-  transition: box-shadow 0.25s ease-in-out;
-  margin: 0 auto; 
-  padding: 2%;
-}
-
-.form-control:hover {
+  font-size: 14px;
   box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.5);
-}
-
-.btn-primary {
-  margin-top: 30px; 
-}
-
-.WT1,
-.WT2,
-.cN
-.masthead h2,
-#quote p,
-.lead,
-#cityName h2 {
-  font-size: 18px;
-  margin: 18px;
-  padding: 2%;
-  color: #001c55; 
-  text-align: center;
-}
-
-#error {
-  color: red;
 }
 
 .footer {
   text-align: left;
   position: absolute;
   bottom: 0;
+  left: 0;
   width: 100%;
   color: #001c55;
   font-size: 8px;
   padding: 5px;
-}
-
-.whatsapp-contact {
-  position: absolute;
-  color: #001c55;
-  text-align: right;
-  font-size: 14px;
-  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.5);
-}
-
-.whatsapp-contact i {
-  font-size: 28px;
-}
-
-
-.masthead h1,
-.masthead h2,
-.text-uppercase,
-.lead,
-.form-inline,
-.form-group,
-.form-control,
-.WT1,
-.WT2,
-.cN,
-#quote p,
-#cityName h2 {
-  margin: 10px;
-}
-
-.btn-primary {
-  margin-top: 20px; 
 }
