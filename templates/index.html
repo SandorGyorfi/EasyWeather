@@ -42,16 +42,15 @@
                 placeholder="Enter city"
               />
             </div>
-            <br>
-            {% if error %}
-            <p class="error">{{ error }}</p>
-            {% endif %}
           </div>
           <div class="col-lg-8 mx-auto">
             <button type="submit" class="btn btn-primary btn-xl">
               Submit <i class="bx bx-cloud"></i>
             </button>
           </div>
+          {% if error %}
+          <p class="error">{{ error }}</p>
+          {% endif %}
         </form>
       </div>
 

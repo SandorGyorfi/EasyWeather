@@ -124,6 +124,8 @@ body {
 }
 
 .error {
+  text-align: center;
+  font-size: 120%;
   font-weight: bold;
   color: red;
 }
