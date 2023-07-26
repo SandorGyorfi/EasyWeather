@@ -1,11 +1,9 @@
-
-
 html {
   scroll-padding-top: calc(4.5rem - 1px);
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   letter-spacing: 0.05rem;
   margin: 0;
   padding: 0;
@@ -26,9 +24,132 @@ body {
   min-height: 35rem;
   text-align: center;
   color: #001c55;
-  background-size: cover; 
+  padding: 100px 0;
+  background-size: cover;
   background-position: center;
-  background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&dl=sean-oulashin-KMn4VEeEPR8-unsplash.jpg');
+  background-image: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&dl=sean-oulashin-KMn4VEeEPR8-unsplash.jpg");
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.masthead h1 {
+  font-size: 3.5rem;
+  line-height: 3.5rem;
+  letter-spacing: 0.8rem;
+  padding: 2%;
+  background: linear-gradient(to right, #007bff 0%, #001c55 100%);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: #001c55;
+  margin: 0 auto;
+}
+
+.masthead h2 {
+  max-width: 20rem;
+  font-size: 1rem;
+  margin: 0 auto;
+  color: #001c55;
+}
+
+.text-uppercase {
+  font-size: 3rem;
+  color: #001c55;
+}
+
+.lead {
+  font-size: 1.25rem;
+  margin-top: 25px;
+  color: #001c55;
+}
+
+.form-inline {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-group {
+  margin-bottom: 0;
+}
+
+.form-control {
+  width: 600px;
+  height: 1.3rem;
+  border-radius: 4px;
+  border: 1px solid #007bff;
+  box-shadow: 0 0.2rem 0.4rem rgba(0, 123, 255, 0.5);
+  color: #001c55;
+  transition: box-shadow 0.25s ease-in-out;
+  margin: 0 auto;
+  padding: 2%;
+}
+
+.form-control:hover {
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.5);
+}
+
+.btn-primary {
+  margin-top: 30px;
+}
+
+.WT1,
+.WT2,
+.cN .masthead h2,
+#quote p,
+.lead,
+#cityName h2 {
+  font-size: 18px;
+  margin: 18px;
+  padding: 2%;
+  color: #001c55;
+  text-align: center;
+}
+
+#error {
+  color: red;
+}
+
+.footer {
+  text-align: left;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  color: #001c55;
+  font-size: 8px;
+  padding: 5px;
+}
+
+.whatsapp-contact {
+  position: absolute;
+  color: #001c55;
+  text-align: right;
+  font-size: 14px;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.5);
+}
+
+.whatsapp-contact i {
+  font-size: 28px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.col-lg-8 {
+  width: 100%;
 }
 
 @media only screen and (max-width: 767px) {
@@ -107,7 +228,6 @@ body {
   }
 }
 
-
 @media only screen and (min-width: 953px) and (max-width: 1100px) {
   .form-control {
     max-width: 300px;
@@ -123,30 +243,4 @@ body {
   .form-control {
     max-width: 300px;
   }
-
-}
-
-
-.whatsapp-contact {
-  position: fixed;
-  bottom: 10px;
-  right: 10px;
-  color: #001c55;
-  font-size: 14px;
-
-}
-
-.footer {
-  text-align: left;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  color: #001c55;
-  font-size: 8px;
-  padding: 5px;
-}
-
-.row{
-  text-align: center;
 }
