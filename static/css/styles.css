@@ -16,7 +16,6 @@ body {
 
 .masthead {
   font-size: 18px;
-  margin: 18px;
   padding: 2%;
   position: relative;
   width: 100%;
@@ -46,7 +45,6 @@ body {
 }
 
 .masthead h2 {
-  max-width: 20rem;
   font-size: 1rem;
   margin: 0 auto;
   color: #001c55;
@@ -172,11 +170,7 @@ body {
     padding: 8px 20px;
   }
 
-  .masthead h2 {
-    max-width: 15rem;
-    font-size: 0.9rem;
-  }
-
+ 
   .WT1,
   .WT2,
   .cN,
