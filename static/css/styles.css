@@ -137,7 +137,9 @@ body {
 }
 
 .whatsapp-contact {
-  position: absolute;
+  position: fixed;
+  right: 0;
+  bottom: 0;
   color: #001c55;
   text-align: right;
   font-size: 14px;
