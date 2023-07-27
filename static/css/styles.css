@@ -302,16 +302,3 @@ body {
   animation: appearFromLeft 2.5s ease forwards;
 }
 
-@keyframes moveUp {
-  from {
-    transform: translateY(0);
-  }
-  to {
-    transform: translateY(-150px); 
-  }
-}
-
-.move-up {
-  animation: moveUp 2s ease-in-out forwards;
-  transform: translateY(-150px);
-}
