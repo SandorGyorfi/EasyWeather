@@ -101,7 +101,7 @@ def get_weather_quote(weather):
         return random.choice(quotes[weather])
     else:
         return None
-    
+
 
 
 
@@ -121,10 +121,9 @@ def index():
             weather_data[user_input] = data
         else:
             error = "Oops! The city name is incorrect or not found. Please try again."
-            return render_template("index.html", data=None, whatsapp_number='+447563713196', error=error)
+            return render_template("index.html", data=None, error=error)
 
-    return render_template("index.html", data=weather_data.get(request.form.get('cityName')),
-                           whatsapp_number='+447563713196', error=None)
+    return render_template("index.html", data=weather_data.get(request.form.get('cityName')), error=None)
 
 
 
@@ -148,7 +147,7 @@ def add_weather_data():
             return jsonify({'message': 'City not found in OpenWeatherMap'}), 404
     else:
         return jsonify({'message': 'City data already exists'}), 409
-    
+
 
 
 
@@ -171,7 +170,7 @@ def update_weather_data():
             return jsonify({'message': 'City not found in OpenWeatherMap'}), 404
     else:
         return jsonify({'message': 'City data not found'}), 404
-    
+
 
 
 
@@ -183,7 +182,7 @@ def delete_weather_data():
         return jsonify({'message': 'City data deleted successfully'}), 200
     else:
         return jsonify({'message': 'City data not found'}), 404
-    
+
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
