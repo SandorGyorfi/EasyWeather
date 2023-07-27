@@ -7,7 +7,6 @@ body {
   letter-spacing: 0.05rem;
   margin: 0;
   padding: 0;
-  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -24,14 +23,12 @@ body {
   background-size: cover;
   background-position: center;
   background: linear-gradient(
-    to top,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(255, 255, 255, 0.65) 30%,
-    rgba(255, 255, 255, 0) 100%
-  ),
-  url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&dl=sean-oulashin-KMn4VEeEPR8-unsplash.jpg");
-  background-size: cover;
-  background-position: center;
+      to top,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 0.65) 30%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    url("url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&dl=sean-oulashin-KMn4VEeEPR8-unsplash.jpg')");
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -69,7 +66,7 @@ body {
 .form-inline {
   margin-top: 30px;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
@@ -106,7 +103,6 @@ body {
   color: #fff;
   cursor: pointer;
   transition: box-shadow 0.25s ease-in-out;
-  width: 100%;
 }
 
 .btn-primary:hover {
@@ -144,7 +140,7 @@ body {
   left: 0;
   bottom: 5px;
   width: 100%;
-  text-align: center;
+  text-align: left;
   color: #001c55;
   font-size: 8px;
   padding: 1.2%;
@@ -338,5 +334,5 @@ body {
   color: #001c55;
   font-weight: bold;
   text-align: center;
-  animation: appearFromLeft 2s ease forwards;
+  animation: appearFromLeft 2.5s ease forwards;
 }
