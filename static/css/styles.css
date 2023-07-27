@@ -307,11 +307,11 @@ body {
     transform: translateY(0);
   }
   to {
-    transform: translateY(-50px); 
+    transform: translateY(-150px); 
   }
 }
 
 .move-up {
   animation: moveUp 2s ease-in-out forwards;
-  transform: translateY(-200px);
+  transform: translateY(-150px);
 }
