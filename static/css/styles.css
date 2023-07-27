@@ -152,8 +152,8 @@ body {
   float: right;
   width: 60px;
   height: 60px;
-  bottom: 20px;
-  right: 18px;
+  bottom: 5px;
+  right: 8px;
   background-color: #001c55;
   color: #fff;
   border-radius: 50px;
@@ -300,4 +300,17 @@ body {
   font-weight: bold;
   text-align: center;
   animation: appearFromLeft 2.5s ease forwards;
+}
+
+@keyframes moveUp {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-50px); 
+  }
+}
+
+.move-up {
+  animation: moveUp 1s ease-in-out forwards;
 }
