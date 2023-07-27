@@ -20,7 +20,7 @@ body {
   height: 100vh;
   text-align: center;
   color: #001c55;
-  background-size: cover;
+  background-size: cover; 
   background-position: center;
   background: linear-gradient(
       to top,
@@ -28,12 +28,13 @@ body {
       rgba(255, 255, 255, 0.65) 30%,
       rgba(255, 255, 255, 0) 100%
     ),
-    url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&dl=sean-oulashin-KMn4VEeEPR8-unsplash.jpg");
+    url("static/assets/img/bg.jpg");
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+
 
 .masthead h1 {
   font-size: 3.5rem;
@@ -252,102 +253,63 @@ body {
   #cityName h2 {
     font-size: 20px;
   }
-
-  .btn-primary {
-    font-size: 1.2rem;
-    padding: 1.2%;
-  }
 }
 
-@media only screen and (min-width: 953px) and (max-width: 1100px) {
+@media only screen and (min-width: 953px) and (max-width: 1023px) {
   .form-control {
     max-width: 300px;
   }
 
   .btn-primary {
-    font-size: 1.3rem;
+    font-size: 1.25rem;
     padding: 1.2%;
   }
+
+  .masthead h1 {
+    font-size: 4.5rem;
+    line-height: 4.5rem;
+    letter-spacing: 0.8rem;
+  }
+
+  .masthead h2 {
+    max-width: 22rem;
+    font-size: 1.25rem;
+  }
+
+  .WT1,
+  .WT2,
+  .cN,
+  .masthead h2,
+  #quote p,
+  .lead,
+  #cityName h2 {
+    font-size: 20px;
+  }
 }
 
-@media only screen and (min-width: 1101px) {
+@media only screen and (min-width: 1024px) {
   .form-control {
-    max-width: 300px;
+    max-width: 350px;
   }
-}
 
-#layer {
-  position: relative;
-}
-
-#layer::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.65);
-  z-index: -1;
-  border-radius: 10px;
-}
-
-#layer h2,
-#layer p {
-  font-size: 20px;
-  margin: 10px;
-  padding: 1.2%;
-  color: #001c55;
-  text-align: center;
-}
-
-#quote {
-  font-size: 18px;
-  margin: 18px;
-  padding: 1.2%;
-  color: #001c55;
-  text-align: center;
-}
-
-.clouds {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url('static/assets/img/cloud.png'); 
-  background-size: cover;
-  background-repeat: no-repeat;
-  z-index: -1;
-  animation: cloudsAnimation 10s linear infinite;
-}
-
-@keyframes cloudsAnimation {
-  0% {
-    opacity: 0;
-    transform: translateY(-100px);
+  .masthead h1 {
+    font-size: 5rem;
+    line-height: 5rem;
+    letter-spacing: 0.8rem;
   }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
+
+  .masthead h2 {
+    max-width: 22rem;
+    font-size: 1.25rem;
   }
-}
 
-#layer {
-  position: relative;
-  opacity: 0;
-}
-
-#layer.show {
-  opacity: 1;
-  animation: textAnimation 3s ease-in-out forwards;
-}
-
-@keyframes textAnimation {
-  0% {
-    transform: translateY(-50px);
-  }
-  100% {
-    transform: translateY(0);
+  .WT1,
+  .WT2,
+  .cN,
+  .masthead h2,
+  #quote p,
+  .lead,
+  #cityName h2 {
+    font-size: 20px;
   }
 }

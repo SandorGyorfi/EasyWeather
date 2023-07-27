@@ -16,7 +16,6 @@
 </head>
 <body>
   <div class="masthead" style="background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&dl=sean-oulashin-KMn4VEeEPR8-unsplash.jpg')">
-
     <div class="container">
       <div class="row">
         <div class="col-lg-8 mx-auto">
@@ -57,22 +56,21 @@
 
       {% if data %}
       <div class="clouds">
-      <div class="row" id="layer">
-        <div  class="col-lg-8 mx-auto">
-          <h2 class="WT2">Weather in {{ data.city }}</h2>
-          <p class="WT1">Weather: {{ data.weather }}</p>
-          <p class="WT1">Temperature: {{ data.temp }}°C</p>
-          <div id="quote">
-            {% if data.quote %}
-            <p>{{ data.quote }}</p>
-            {% else %}
-            <p>No quote available.</p>
-            {% endif %}
+        <div class="row" id="layer">
+          <div class="col-lg-8 mx-auto">
+            <h2 class="WT2">Weather in {{ data.city }}</h2>
+            <p class="WT1">Weather: {{ data.weather }}</p>
+            <p class="WT1">Temperature: {{ data.temp }}°C</p>
+            <div id="quote">
+              {% if data.quote %}
+                <p>{{ data.quote }}</p>
+              {% else %}
+                <p>No quote available.</p>
+              {% endif %}
+            </div>
           </div>
         </div>
       </div>
-    </div>
-      {% endif %}
     </div>
   </div>
 	<a href="https://wa.me/447563713196?text=Me%20gustaría%20saber%20el%20precio%20del%20coche" class="whatsapp" target="_blank"> <i class="fa fa-whatsapp whatsapp-icon"></i></a>
