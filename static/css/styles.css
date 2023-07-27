@@ -7,6 +7,7 @@ body {
   letter-spacing: 0.05rem;
   margin: 0;
   padding: 0;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -20,21 +21,22 @@ body {
   height: 100vh;
   text-align: center;
   color: #001c55;
-  background-size: cover; 
+  background-size: cover;
   background-position: center;
   background: linear-gradient(
-      to top,
-      rgba(255, 255, 255, 1) 0%,
-      rgba(255, 255, 255, 0.65) 30%,
-      rgba(255, 255, 255, 0) 100%
-    ),
-    url("static\assets\img\bg.jpg");
+    to top,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0.65) 30%,
+    rgba(255, 255, 255, 0) 100%
+  ),
+  url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&dl=sean-oulashin-KMn4VEeEPR8-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-
 
 .masthead h1 {
   font-size: 3.5rem;
@@ -67,7 +69,7 @@ body {
 .form-inline {
   margin-top: 30px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
 }
 
@@ -104,6 +106,7 @@ body {
   color: #fff;
   cursor: pointer;
   transition: box-shadow 0.25s ease-in-out;
+  width: 100%;
 }
 
 .btn-primary:hover {
@@ -141,11 +144,12 @@ body {
   left: 0;
   bottom: 5px;
   width: 100%;
-  text-align: left;
+  text-align: center;
   color: #001c55;
   font-size: 8px;
   padding: 1.2%;
 }
+
 .whatsapp {
   position: absolute;
   float: right;
@@ -168,7 +172,6 @@ body {
 .whatsapp-icon a:hover {
   box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.3);
 }
-
 
 .container {
   display: flex;
@@ -312,4 +315,28 @@ body {
   #cityName h2 {
     font-size: 20px;
   }
+}
+
+@keyframes appearFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.WT1,
+.WT2,
+#quote p,
+.masthead h2 {
+  font-size: 18px;
+  margin: 18px;
+  padding: 5px;
+  color: #001c55;
+  font-weight: bold;
+  text-align: center;
+  animation: appearFromLeft 2s ease forwards;
 }
