@@ -3,6 +3,7 @@ import requests
 import random
 import os
 
+
 app = Flask(__name__)
 
 weather_data = {}
@@ -22,6 +23,7 @@ def get_weather(user_input):
         weather = weather_data.json()['weather'][0]['main']
         temp = round(weather_data.json()['main']['temp'])
         return weather, temp
+
 
 
 def get_weather_quote(weather):
@@ -92,12 +94,15 @@ def get_weather_quote(weather):
             "In the hazy mist, discover a sense of wonder, where the familiar transforms into something magical. - Bob Marley",
             "Haze envelops the landscape, revealing only fragments of reality, inviting us to seek meaning beyond what meets the eye. - Ziggy Marley"
         ]
-    }
+
+     }
 
     if weather in quotes:
         return random.choice(quotes[weather])
     else:
         return None
+    
+
 
 
 @app.route("/", methods=['GET', 'POST'])
@@ -116,9 +121,10 @@ def index():
             weather_data[user_input] = data
         else:
             error = "Oops! The city name is incorrect or not found. Please try again."
-            return render_template("index.html", data=None, error=error)
+            return render_template("index.html", data=None, whatsapp_link="https://wa.me/447563713196?text=Me%20gustaría%20saber%20el%20precio%20del%20coche", error=error)
 
-    return render_template("index.html", data=weather_data.get(request.form.get('cityName')), error=None)
+    return render_template("index.html", data=weather_data.get(request.form.get('cityName')),
+                           whatsapp_link="https://wa.me/447563713196?text=Me%20gustaría%20saber%20el%20precio%20del%20coche", error=None)
 
 
 @app.route("/add_weather_data", methods=['POST'])
@@ -140,6 +146,8 @@ def add_weather_data():
             return jsonify({'message': 'City not found in OpenWeatherMap'}), 404
     else:
         return jsonify({'message': 'City data already exists'}), 409
+    
+
 
 
 @app.route("/update_weather_data", methods=['PUT'])
@@ -161,6 +169,8 @@ def update_weather_data():
             return jsonify({'message': 'City not found in OpenWeatherMap'}), 404
     else:
         return jsonify({'message': 'City data not found'}), 404
+    
+
 
 
 @app.route("/delete_weather_data", methods=['DELETE'])
@@ -171,7 +181,7 @@ def delete_weather_data():
         return jsonify({'message': 'City data deleted successfully'}), 200
     else:
         return jsonify({'message': 'City data not found'}), 404
-
+    
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
