@@ -313,5 +313,5 @@ body {
 
 .move-up {
   animation: moveUp 2s ease-in-out forwards;
-  transform: translateY(-100px);
+  transform: translateY(-200px);
 }
