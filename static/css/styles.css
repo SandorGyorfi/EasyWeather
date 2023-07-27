@@ -28,7 +28,7 @@ body {
       rgba(255, 255, 255, 0.65) 30%,
       rgba(255, 255, 255, 0) 100%
     ),
-    url("static/assets/img/bg.jpg");
+    url("static\assets\img\bg.jpg");
   display: flex;
   flex-direction: column;
   justify-content: center;

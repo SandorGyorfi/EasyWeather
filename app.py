@@ -3,7 +3,6 @@ import requests
 import random
 import os
 
-
 app = Flask(__name__)
 
 weather_data = {}
@@ -23,7 +22,6 @@ def get_weather(user_input):
         weather = weather_data.json()['weather'][0]['main']
         temp = round(weather_data.json()['main']['temp'])
         return weather, temp
-
 
 
 def get_weather_quote(weather):
@@ -94,15 +92,12 @@ def get_weather_quote(weather):
             "In the hazy mist, discover a sense of wonder, where the familiar transforms into something magical. - Bob Marley",
             "Haze envelops the landscape, revealing only fragments of reality, inviting us to seek meaning beyond what meets the eye. - Ziggy Marley"
         ]
-
-     }
+    }
 
     if weather in quotes:
         return random.choice(quotes[weather])
     else:
         return None
-
-
 
 
 @app.route("/", methods=['GET', 'POST'])
@@ -126,8 +121,6 @@ def index():
     return render_template("index.html", data=weather_data.get(request.form.get('cityName')), error=None)
 
 
-
-
 @app.route("/add_weather_data", methods=['POST'])
 def add_weather_data():
     city = request.form['cityName']
@@ -147,8 +140,6 @@ def add_weather_data():
             return jsonify({'message': 'City not found in OpenWeatherMap'}), 404
     else:
         return jsonify({'message': 'City data already exists'}), 409
-
-
 
 
 @app.route("/update_weather_data", methods=['PUT'])
@@ -172,8 +163,6 @@ def update_weather_data():
         return jsonify({'message': 'City data not found'}), 404
 
 
-
-
 @app.route("/delete_weather_data", methods=['DELETE'])
 def delete_weather_data():
     city = request.args.get('city')
@@ -182,8 +171,6 @@ def delete_weather_data():
         return jsonify({'message': 'City data deleted successfully'}), 200
     else:
         return jsonify({'message': 'City data not found'}), 404
-
-
 
 
 if __name__ == "__main__":
