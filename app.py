@@ -124,7 +124,7 @@ def index():
             return render_template("index.html", data=None, whatsapp_link="https://wa.me/447563713196?text=Hi,I%20would%20like%20to%20ask%20about:%20", error=error)
 
     return render_template("index.html", data=weather_data.get(request.form.get('cityName')),
-                           whatsapp_link="https://wa.me/447563713196?text=Hi,%I%20would%20like%20to%20ask%20about:%20", error=None)
+                           whatsapp_link="https://wa.me/447563713196?text=Hi,I%20would%20like%20to%20ask%20about:%20", error=None)
 
 
 @app.route("/add_weather_data", methods=['POST'])
