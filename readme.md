@@ -22,11 +22,14 @@ Enjoy your weather journey with EasyWeather!
 
 > Weather Forecast: Enter the name of your city, and EasyWeather will fetch the latest weather data for you. Stay informed about the current weather conditions, including temperature, and weather description. 
 
-> Uplifting Weather Quotes: Alongside the weather forecast, EasyWeather adds a touch of positivity to your day with inspiring quotes related to the weather condition. Let the words of wisdom brighten your mood! 
+> Uplifting Weather Quotes: Alongside the weather forecast, EasyWeather adds a touch of positivity to your day with inspiring quotes related to the weather condition. Let the words of wisdom brighten your mood!
 
-> WhatsApp Contact: Need assistance or have questions about the weather? EasyWeather is just a message away! Use the WhatsApp icon provided on the page to reach out to our friendly support team for any inquiries. 
+> WhatsApp Contact: Need assistance or have questions about the weather? EasyWeather is just a message away! Use the WhatsApp icon provided on the page to reach out to our friendly support team for any inquiries.
 
 <p>&nbsp;</p>
+
+<img src="images\mockup.png">
+
 
 ## User Experience
 
@@ -54,7 +57,7 @@ The main page navigation of EasyWeather is carefully crafted to provide users wi
 
 1. Simple City Search Bar: As soon as you land on the EasyWeather homepage, you are greeted with a simple city search bar prominently displayed at the top. Just type the name of your desired city, hit the "Submit" button or press "Enter," and let the adventure begin! The search bar is user-friendly, enabling even first-time visitors to quickly initiate a weather search effortlessly.
 
-2. Instant Weather Updates: Once you've entered the city name and initiated the search, EasyWeather instantly fetches the latest weather updates for the specified location. The real-time data is then displayed in an elegant and organized manner, providing you with immediate access to current weather conditions and temperature. 
+2. Instant Weather Updates: Once you've entered the city name and initiated the search, EasyWeather instantly fetches the latest weather updates for the specified location. The real-time data is then displayed in an elegant and organized manner, providing you with immediate access to current weather conditions and temperature.
 
 3. Uplifting Weather Quotes Integration: While you wait for the weather data to load, EasyWeather treats you to a delightful surprise – an uplifting weather-related quote that perfectly complements the current weather condition. This unique integration of inspiring quotes brings an element of joy and positivity to the navigation experience.
 
@@ -215,6 +218,10 @@ __Haze Quotes:__
 - "Haze is like nature's poetry, each suspended particle a delicate verse, expressing the wonder of existence." - Ziggy Marley
 - "In the hazy mist, discover a sense of wonder, where the familiar transforms into something magical." - Bob Marley
 - "Haze envelops the landscape, revealing only fragments of reality, inviting us to seek meaning beyond what meets the eye." - Ziggy Marley
+
+## Photo Credit:
+>Photo credit for background image: 
+[Sean Oulashin](https://unsplash.com/photos/KMn4VEeEPR8)
 
 ## OpenWeatherMap API:
 
