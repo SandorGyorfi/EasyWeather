@@ -2,7 +2,7 @@
 
 ## Weather Forecast Web Application
 
-![Logo](images\logopic.png)
+<img src="<img src="images\logopic.png" alt="Alt Text">
 
 ## Introduction
 
@@ -12,7 +12,7 @@ Welcome to EasyWeather, a delightful web application that provides weather forec
 
 Experience EasyWeather live by visiting the deployed web application. Click on the link below to access EasyWeather and explore weather forecasts along with uplifting quotes:
 
-Click here to live view → [EasyWeather](https://your-easyweather-app-url.com)
+Click here to live view → [EasyWeather](https://https://easyweather-fb6c4e1d706b.herokuapp.com/)
 
 Enjoy your weather journey with EasyWeather!
 
@@ -24,7 +24,7 @@ Enjoy your weather journey with EasyWeather!
 
 - **WhatsApp Contact:** Need assistance or have questions about the weather? EasyWeather is just a message away! Use the WhatsApp icon provided on the page to reach out to our friendly support team for any inquiries.
 
-![Mockup](link-to-your-mockup.png)
+<img src="images\mockup.png">
 
 ## User Experience
 
@@ -46,7 +46,7 @@ At EasyWeather, our top priority is to provide you with a delightful and memorab
 
 ## The Main Page
 
-![MainPage](images\mainpage.png)
+<img src="images\mainpage.png">
 
 The main page navigation of EasyWeather is carefully crafted to provide you with a seamless and intuitive journey through weather forecasts and uplifting quotes. Our goal is to guide you with ease and make the entire experience enjoyable.
 
@@ -141,6 +141,6 @@ Skills:
 - Python
 - HTML/CSS
 
-![Logo](images\logopic.png)
+<img src="images\logopic.png">
 
 EasyWeather is a personal project and is not associated with any company or organization. The application is developed solely for educational and recreational purposes.
