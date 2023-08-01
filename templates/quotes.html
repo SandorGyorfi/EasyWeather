@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EasyWeather</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+  <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+   
+    <header class="masthead text-center text-white">
+        <div class="masthead-content">
+            <div class="container">
+                <h1 class="masthead-heading mb-0">Uplifting Weather Quotes</h1>
+            </div>
+        </div>
+    </header>
+
+    <section class="weather-section bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <div class="weather-card card">
+                        <div class="card-body">
+                            <h2 class="card-title">Rain</h2>
+                            <p class="card-text">"Let the rain wash away your worries and bring you renewed energy. - Bob Marley"</p>
+                            <p class="card-text">"Dance in the rain and let it cleanse your spirit. - Ziggy Marley"</p>
+                            <p class="card-text">"Raindrops are nature's melody, listen and find peace within. - Jimmy Cliff"</p>
+                            <p class="card-text">"In the rain, find inspiration and let it nourish your soul. - Bob Marley"</p>
+                            <p class="card-text">"Rainy days are the perfect time to reflect and grow. - Ziggy Marley"</p>
+                            <p class="card-text">"Rain is a reminder that even storms can bring beauty. - Jimmy Cliff"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <div class="weather-card card">
+                        <div class="card-body">
+                            <h2 class="card-title">Drizzle</h2>
+                            <p class="card-text">"In the gentle drizzle, find tranquility and serenity. - Bob Marley"</p>
+                            <p class="card-text">"Drizzle is like nature's soft kiss on your skin. - Ziggy Marley"</p>
+                            <p class="card-text">"The drizzle is a whisper from nature, inviting you to slow down and appreciate the small moments. - Jimmy Cliff"</p>
+                            <p class="card-text">"Even a little drizzle can bring forth new beginnings. - Ziggy Marley"</p>
+                            <p class="card-text">"Drizzle is nature's way of showering you with blessings. - Bob Marley"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <div class="weather-card card">
+                        <div class="card-body">
+                            <h2 class="card-title">Thunderstorm</h2>
+                            <p class="card-text">"In the midst of a thunderstorm, find strength and courage. - Bob Marley"</p>
+                            <p class="card-text">"Let the thunderstorm ignite your passion and awaken your spirit. - Ziggy Marley"</p>
+                            <p class="card-text">"Thunderstorms remind us of the power within and the resilience of the human spirit. - Jimmy Cliff"</p>
+                            <p class="card-text">"Embrace the thunderstorm, for it brings clarity and renewal. - Ziggy Marley"</p>
+                            <p class="card-text">"When the thunder roars, let it be a reminder of your inner strength. - Bob Marley"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add similar card elements for other weather conditions (Snow, Mist, Clear, Clouds, Fog, Haze) -->
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <div class="weather-card card">
+                        <div class="card-body">
+                            <h2 class="card-title">Snow</h2>
+                            <p class="card-text">"In the silence of the snowfall, find peace and tranquility. - Ziggy Marley"</p>
+                            <p class="card-text">"Snowflakes are nature's delicate artwork, marvel at their beauty. - Bob Marley"</p>
+                            <p class="card-text">"When it snows, let your inner child come out to play. - Ziggy Marley"</p>
+                            <p class="card-text">"Snowfall blankets the world, inviting us to find warmth in each other's hearts. - Jimmy Cliff"</p>
+                            <p class="card-text">"The snow whispers serenity, listen closely and find solace. - Ziggy Marley"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <div class="weather-card card">
+                        <div class="card-body">
+                            <h2 class="card-title">Mist</h2>
+                            <p class="card-text">"In the misty morning, find clarity and new perspectives. - Ziggy Marley"</p>
+                            <p class="card-text">"Mist is nature's veil, revealing only what is meant to be seen. - Bob Marley"</p>
+                            <p class="card-text">"Mist holds secrets waiting to be uncovered, let it guide your journey. - Jimmy Cliff"</p>
+                            <p class="card-text">"In the mist, find a sense of mystery and embrace the unknown. - Ziggy Marley"</p>
+                            <p class="card-text">"The mist obscures reality, allowing imagination to take flight. - Bob Marley"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <div class="weather-card card">
+                        <div class="card-body">
+                            <h2 class="card-title">Clear</h2>
+                            <p class="card-text">"In the clear skies, find limitless possibilities. - Ziggy Marley"</p>
+                            <p class="card-text">"Clear skies are a canvas for dreams to take flight. - Bob Marley"</p>
+                            <p class="card-text">"When the skies are clear, let your spirit soar and reach new heights. - Jimmy Cliff"</p>
+                            <p class="card-text">"Clear skies remind us of the beauty of simplicity. - Ziggy Marley"</p>
+                            <p class="card-text">"The clear sky is an open invitation to seize the day. - Bob Marley"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add more card elements for Clouds, Fog, Haze quotes -->
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <div class="weather-card card">
+                        <div class="card-body">
+                            <h2 class="card-title">Clouds</h2>
+                            <p class="card-text">"Clouds are nature's poetry, written across the sky. - Ziggy Marley"</p>
+                            <p class="card-text">"Behind every cloud, the sun still shines. - Bob Marley"</p>
+                            <p class="card-text">"Clouds dance in the sky, reminding us to find joy in movement. - Jimmy Cliff"</p>
+                            <p class="card-text">"In the clouds, find shapes and stories waiting to be told. - Ziggy Marley"</p>
+                            <p class="card-text">"The clouds embrace the sky, just as we embrace life's journey. - Bob Marley"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <div class="weather-card card">
+                        <div class="card-body">
+                            <h2 class="card-title">Fog</h2>
+                            <p class="card-text">"In the fog, find moments of introspection and self-discovery. - Ziggy Marley"</p>
+                            <p class="card-text">"Fog envelops the world, inviting us to explore with curiosity. - Bob Marley"</p>
+                            <p class="card-text">"Fog is a reminder that clarity can be found in simplicity. - Jimmy Cliff"</p>
+                            <p class="card-text">"In the fog, let your imagination wander and uncover hidden treasures. - Ziggy Marley"</p>
+                            <p class="card-text">"Fog is like a gentle hug from nature, soothing and comforting. - Bob Marley"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <div class="weather-card card">
+                        <div class="card-body">
+                            <h2 class="card-title">Haze</h2>
+                            <p class="card-text">"In the haze, find a sense of mystery and wonder. - Ziggy Marley"</p>
+                            <p class="card-text">"Haze veils the world, encouraging us to see beyond the surface. - Bob Marley"</p>
+                            <p class="card-text">"Haze softens the edges, allowing us to focus on what truly matters. - Jimmy Cliff"</p>
+                            <p class="card-text">"In the haze, discover beauty in the subtleties of life. - Ziggy Marley"</p>
+                            <p class="card-text">"The haze reminds us to slow down and savor the present moment. - Bob Marley"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="footer">
+      <a href="{{ whatsapp_link }}" class="whatsapp" target="_blank">
+        <i class="fa fa-whatsapp whatsapp-icon"></i>
+      </a>
+      <div class="col-lg-12 text-center">
+        <p>© 2023 EasyWeather</p>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

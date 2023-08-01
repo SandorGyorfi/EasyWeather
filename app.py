@@ -1,12 +1,28 @@
 from flask import Flask, render_template, request, jsonify
-import requests
 import random
-import os
+import requests
 
+import os
+from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 
-weather_data = {}
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL') or 'sqlite:///weather_data.db'
+db = SQLAlchemy(app)
+
+class WeatherData(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    city = db.Column(db.String(100), unique=True, nullable=False)
+    weather = db.Column(db.String(100), nullable=False)
+    temp = db.Column(db.Float, nullable=False)
+    quote = db.Column(db.Text)
+
+    def __init__(self, city, weather, temp, quote):
+        self.city = city
+        self.weather = weather
+        self.temp = temp
+        self.quote = quote
+
 
 API_KEY = os.environ.get('API_KEY')
 if not API_KEY:
@@ -97,12 +113,38 @@ def get_weather_quote(weather):
 
      }
 
+
     if weather in quotes:
         return random.choice(quotes[weather])
     else:
         return None
-    
 
+
+def add_weather_data(city, weather, temp, quote):
+    data = WeatherData(city=city, weather=weather, temp=temp, quote=quote)
+    db.session.add(data)
+    db.session.commit()
+
+
+def update_weather_data(city):
+    weather = get_weather(city)
+    if weather:
+        weather_quote = get_weather_quote(weather[0])
+        data = WeatherData.query.filter_by(city=city).first()
+        if data:
+            data.weather = weather[0]
+            data.temp = weather[1]
+            data.quote = weather_quote
+            db.session.commit()
+        else:
+            add_weather_data(city, weather[0], weather[1], weather_quote)
+
+
+def delete_weather_data(city):
+    data = WeatherData.query.filter_by(city=city).first()
+    if data:
+        db.session.delete(data)
+        db.session.commit()
 
 
 @app.route("/", methods=['GET', 'POST'])
@@ -112,77 +154,70 @@ def index():
         weather = get_weather(user_input)
         if weather:
             weather_quote = get_weather_quote(weather[0])
-            data = {
-                'city': user_input,
-                'weather': weather[0],
-                'temp': weather[1],
-                'quote': weather_quote
-            }
-            weather_data[user_input] = data
+            update_weather_data(user_input)
         else:
             error = "Oops! The city name is incorrect or not found. Please try again."
             return render_template("index.html", data=None, whatsapp_link="https://wa.me/447563713196?text=Hi,I%20would%20like%20to%20ask%20about:%20", error=error)
 
-    return render_template("index.html", data=weather_data.get(request.form.get('cityName')),
+    return render_template("index.html", data=WeatherData.query.filter_by(city=request.form.get('cityName')).first(),
                            whatsapp_link="https://wa.me/447563713196?text=Hi,I%20would%20like%20to%20ask%20about:%20", error=None)
 
 
 @app.route("/add_weather_data", methods=['POST'])
-def add_weather_data():
+def add_weather():
     city = request.form['cityName']
-    if city not in weather_data:
-        weather = get_weather(city)
-        if weather:
-            weather_quote = get_weather_quote(weather[0])
-            data = {
-                'city': city,
-                'weather': weather[0],
-                'temp': weather[1],
-                'quote': weather_quote
-            }
-            weather_data[city] = data
-            return jsonify(data), 201
-        else:
-            return jsonify({'message': 'City not found in OpenWeatherMap'}), 404
-    else:
-        return jsonify({'message': 'City data already exists'}), 409
-    
 
+    weather = get_weather(city)
+    if weather:
+        weather_quote = get_weather_quote(weather[0])
+        data = WeatherData.query.filter_by(city=city).first()
+        if data:
+            return jsonify({'message': 'City data already exists'}), 409
+        else:
+            add_weather_data(city, weather[0], weather[1], weather_quote)
+            return jsonify(WeatherData.query.filter_by(city=city).first()), 201
+    else:
+        return jsonify({'message': 'City not found in OpenWeatherMap'}), 404
 
 
 @app.route("/update_weather_data", methods=['PUT'])
-def update_weather_data():
+def update_weather():
     city = request.form['city']
-    if city in weather_data:
-        weather = get_weather(city)
-        if weather:
-            weather_quote = get_weather_quote(weather[0])
-            data = {
-                'city': city,
-                'weather': weather[0],
-                'temp': weather[1],
-                'quote': weather_quote
-            }
-            weather_data[city] = data
-            return jsonify(data), 200
+
+    weather = get_weather(city)
+    if weather:
+        weather_quote = get_weather_quote(weather[0])
+        data = WeatherData.query.filter_by(city=city).first()
+        if data:
+            data.weather = weather[0]
+            data.temp = weather[1]
+            data.quote = weather_quote
+            db.session.commit()
+            return jsonify(WeatherData.query.filter_by(city=city).first()), 200
         else:
-            return jsonify({'message': 'City not found in OpenWeatherMap'}), 404
+            add_weather_data(city, weather[0], weather[1], weather_quote)
+            return jsonify(WeatherData.query.filter_by(city=city).first()), 201
     else:
-        return jsonify({'message': 'City data not found'}), 404
-    
+        return jsonify({'message': 'City not found in OpenWeatherMap'}), 404
+
 
 
 
 @app.route("/delete_weather_data", methods=['DELETE'])
-def delete_weather_data():
+def delete_weather():
     city = request.args.get('city')
-    if city in weather_data:
-        del weather_data[city]
+    data = WeatherData.query.filter_by(city=city).first()
+    if data:
+        db.session.delete(data)
+        db.session.commit()
         return jsonify({'message': 'City data deleted successfully'}), 200
     else:
         return jsonify({'message': 'City data not found'}), 404
-    
+
 
 if __name__ == "__main__":
+    with app.app_context():
+        db.create_all()
+
     port = int(os.environ.get("PORT", 5000))
     app.run(host='0.0.0.0', port=port, debug=False)
