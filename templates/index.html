@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,18 +16,17 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
-</head>
-<body class="masthead" style="background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&dl=sean-oulashin-KMn4VEeEPR8-unsplash.jpg')">
+<body class="masthead">
   <div>
-
     <div class="container">
       <div class="row">
         <div class="col-lg-8 mx-auto">
-          <h1 class="text-uppercase">
+          <h1 class="text-uppercase mist-effect">
             Easy<i class="bx bx-cloud"></i>Weather
           </h1>
           <p class="lead">
-            Enter your city to discover the magic of weather with inspirational weather quotes. No matter the weather, our service will warm your heart.
+            Enter your city to discover the magic of weather with inspirational weather quotes. No matter the weather,
+            our service will warm your heart.
           </p>
         </div>
       </div>
@@ -36,14 +36,7 @@
           <form class="form-inline" method="POST">
             <div class="form-group">
               <label for="cityName" class="WT1">Enter city name:</label>
-              <input
-                type="text"
-                class="form-control"
-                id="cityName"
-                name="cityName"
-                required
-                placeholder="Enter city"
-              />
+              <input type="text" class="form-control" id="cityName" name="cityName" required placeholder="Enter city" />
             </div>
           </div>
           <div class="col-lg-8 mx-auto">
@@ -59,7 +52,7 @@
 
       {% if data %}
       <div class="row" id="layer">
-        <div  class="col-lg-8 mx-auto">
+        <div class="col-lg-8 mx-auto">
           <h2 class="WT2">Weather in {{ data.city }}</h2>
           <p class="WT1">Weather: {{ data.weather }}</p>
           <p class="WT1">Temperature: {{ data.temp }}°C</p>
@@ -75,12 +68,17 @@
       {% endif %}
     </div>
   </div>
-  <a href="{{ whatsapp_link }}" class="whatsapp" target="_blank"><i class="fa fa-whatsapp whatsapp-icon"></i></a>  <footer class="footer">
+
+  <footer class="footer">
+    <a href="{{ whatsapp_link }}" class="whatsapp" target="_blank">
+      <i class="fa fa-whatsapp whatsapp-icon"></i>
+    </a>
     <div class="col-lg-12 text-center">
-      <p> © 2023 EasyWeather</p>
+      <p>© 2023 EasyWeather</p>
     </div>
   </footer>
 
   <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
 </body>
+
 </html>
