@@ -2,7 +2,7 @@
 
 ## Weather Forecast Web Application
 
-<img src="<img src="images\logopic.png" alt="Alt Text">
+<img src="images\logopic.png" alt="logo" width=400px;>
 
 ## Introduction
 
@@ -12,7 +12,7 @@ Welcome to EasyWeather, a delightful web application that provides weather forec
 
 Experience EasyWeather live by visiting the deployed web application. Click on the link below to access EasyWeather and explore weather forecasts along with uplifting quotes:
 
-Click here to live view → [EasyWeather](https://https://easyweather-fb6c4e1d706b.herokuapp.com/)
+Click here to live view → [EasyWeather](https://easyweather-fb6c4e1d706b.herokuapp.com/)
 
 Enjoy your weather journey with EasyWeather!
 
@@ -24,7 +24,7 @@ Enjoy your weather journey with EasyWeather!
 
 - **WhatsApp Contact:** Need assistance or have questions about the weather? EasyWeather is just a message away! Use the WhatsApp icon provided on the page to reach out to our friendly support team for any inquiries.
 
-<img src="images\mockup.png">
+<img src="images\mockup.png" alt="mockup" width=400px; >
 
 ## User Experience
 
@@ -46,7 +46,7 @@ At EasyWeather, our top priority is to provide you with a delightful and memorab
 
 ## The Main Page
 
-<img src="images\mainpage.png">
+<img src="images\mainpage.png" alt="main" width=400px;>
 
 The main page navigation of EasyWeather is carefully crafted to provide you with a seamless and intuitive journey through weather forecasts and uplifting quotes. Our goal is to guide you with ease and make the entire experience enjoyable.
 
@@ -114,7 +114,7 @@ Python, combined with Flask and other libraries, empowers EasyWeather to provide
 
 ### Uplifting Weather Quotes:
 
-[View Quotes](templates\quotes.html)
+[View Quotes](quotes.md)
 
 ### OpenWeatherMap API:
 
@@ -141,6 +141,6 @@ Skills:
 - Python
 - HTML/CSS
 
-<img src="images\logopic.png">
+<img src="images\logopic.png" alt="logo" width=400px>
 
 EasyWeather is a personal project and is not associated with any company or organization. The application is developed solely for educational and recreational purposes.
