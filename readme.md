@@ -2,7 +2,8 @@
 
 ## Weather Forecast Web Application
 
-<img src="images\logopic.png" alt="logo" width=400px;>
+![logo](images\logopic.png)
+
 
 ## Introduction
 
@@ -24,7 +25,9 @@ Enjoy your weather journey with EasyWeather!
 
 - **WhatsApp Contact:** Need assistance or have questions about the weather? EasyWeather is just a message away! Use the WhatsApp icon provided on the page to reach out to our friendly support team for any inquiries.
 
-<img src="images\mockup.png" alt="mockup" width=400px; >
+
+![mockup](images\mockup.png)
+
 
 ## User Experience
 
@@ -46,7 +49,7 @@ At EasyWeather, our top priority is to provide you with a delightful and memorab
 
 ## The Main Page
 
-<img src="images\mainpage.png" alt="main" width=400px;>
+![main page](images\mainpage.png)
 
 The main page navigation of EasyWeather is carefully crafted to provide you with a seamless and intuitive journey through weather forecasts and uplifting quotes. Our goal is to guide you with ease and make the entire experience enjoyable.
 
@@ -110,7 +113,7 @@ Python, combined with Flask and other libraries, empowers EasyWeather to provide
 
 ### Development and Implementation:
 
-- Sandor Gyorfi
+-  Sandor Gyorfi
 
 ### Uplifting Weather Quotes:
 
@@ -128,19 +131,25 @@ The EasyWeather web application is built using the Flask framework, providing a 
 
 For any inquiries, suggestions, or support, please feel free to reach out to:
 
-Sandor Gyorfi - Junior Software Engineer
+Sandor Gyorfi - Junior Developer
 
 Contact Information:
 
-- Email: mr.sandorgyorfi@gmail.com
-- Phone: (+44) 7563713196
-- GitHub: Sandor Gyorfi
 
-Skills:
+- WhatsApp: [Message me on WhatsApp](https://wa.me/447563713196)
+- Find me here on [Github](https://github.com/SandorGyorfi/)
 
-- Python
-- HTML/CSS
+> __Skills:__
 
-<img src="images\logopic.png" alt="logo" width=400px>
+- Python ![logo](images\plogo.png)
 
-EasyWeather is a personal project and is not associated with any company or organization. The application is developed solely for educational and recreational purposes.
+- JavaScript ![logo](images\jslogo.png)
+
+- Css ![logo](images\css.png)
+
+- HTML ![logo](images\htmllogo.png)
+
+
+![logo](images\logopic.png)
+
+##### _EasyWeather is a personal project and is not associated with any company or organization. The application is developed solely for educational and recreational purposes._
