@@ -2,8 +2,7 @@
 
 ## Weather Forecast Web Application
 
-![logo](images\logopic.png)
-
+<img src="images\logopic.png" alt="logo" width=300px;>
 
 ## Introduction
 
@@ -25,9 +24,7 @@ Enjoy your weather journey with EasyWeather!
 
 - **WhatsApp Contact:** Need assistance or have questions about the weather? EasyWeather is just a message away! Use the WhatsApp icon provided on the page to reach out to our friendly support team for any inquiries.
 
-
-![mockup](images\mockup.png)
-
+<img src="images\mockup.png" alt="mockup" width=300px; >
 
 ## User Experience
 
@@ -49,7 +46,7 @@ At EasyWeather, our top priority is to provide you with a delightful and memorab
 
 ## The Main Page
 
-![main page](images\mainpage.png)
+<img src="images\mainpage.png" alt="main" width=400px;>
 
 The main page navigation of EasyWeather is carefully crafted to provide you with a seamless and intuitive journey through weather forecasts and uplifting quotes. Our goal is to guide you with ease and make the entire experience enjoyable.
 
@@ -141,15 +138,14 @@ Contact Information:
 
 > __Skills:__
 
-- Python ![logo](images\plogo.png)
-
-- JavaScript ![logo](images\jslogo.png)
-
-- Css ![logo](images\css.png)
-
-- HTML ![logo](images\htmllogo.png)
+- __Python__ <img src="images/jslogo.png" alt="python logo" style="height: 18px; background-color:white;">
+- __JavaScript__ <img src="images/plogo.png" alt="JavaScript logo" style="height: 18px; background-color:white;">
+- __Css__ <img src="images/css.png" alt="Css logo" style="height: 18px; background-color:white;">
+- __HTML__ <img src="images/htmllogo.png" alt="Html logo" style="height: 18px; background-color:white;">
 
 
-![logo](images\logopic.png)
+
+
+<img src="images\logopic.png" alt="logo" width=400px>
 
 ##### _EasyWeather is a personal project and is not associated with any company or organization. The application is developed solely for educational and recreational purposes._
